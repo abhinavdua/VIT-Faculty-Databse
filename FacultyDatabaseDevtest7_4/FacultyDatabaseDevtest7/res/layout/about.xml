@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        
+        <LinearLayout android:orientation="vertical" android:padding="25.0dip" android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" android:layout_alignParentTop="true">
+            
+            
+            
+            
+            
+            
+            
+            <TextView android:textColor="#197A19" android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" android:layout_marginLeft="350px" android:text="DEVELOPERS" />
+            
+            
+            <View  android:background="#197A19" android:layout_width="fill_parent" 
+                android:layout_height="2.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            
+            
+            
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" 
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abhinav Dua" />
+            
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" 
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vatsal Mahajan" />
+            
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" 
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Himanshu Verma" />
+            
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" 
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dilip Jain" />
+            
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                android:text="\n" />
+            
+            <TextView android:layout_width="wrap_content" android:textAppearance="?android:textAppearanceMedium" 
+                android:layout_height="wrap_content" android:text="App icon by: Mahesh Haldar" />
+            
+            <TextView android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" android:text="\n" />
+            
+            <TextView android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" android:text="\n\n" />
+            
+            
+            <TextView android:textColor="#197A19" android:gravity="center_horizontal" 
+                android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="DISCLAIMER" />
+            
+            <View  android:background="#197A19" android:layout_width="fill_parent" 
+                android:layout_height="2.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:autoLink="all"
+                android:text="If you find any irregularities in the data shown by the app, please send us a mail at codebotsvit@gmail.com with the correct details of the particular faculty."
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#ff000000" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,1 @@
+ INSERT INTO site (ID, Fac_Name, Fac_Cabin, Fac_Phone) VALUES (2, 'Gopi', 987, 123456);

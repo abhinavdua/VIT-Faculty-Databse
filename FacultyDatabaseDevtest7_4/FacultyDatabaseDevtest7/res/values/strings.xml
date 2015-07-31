@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VIT Faculty Database</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="school_name">Select your school from the list below</string>
+
+    <string-array name="school_sel">
+        <item>School of Computer Science and Engineering</item>
+        <item>School of Information Technology and Engineering</item>
+        <item>School of Electronics Engineering</item>
+        <item>School of Bio-Sciences and Technology</item>
+        <item>School of Mechanical and Building Sciences</item>
+        <item>School of Electrical Engineering</item>
+        <item>School of Social Sciences and Languages</item>
+        <item>VIT Business School</item>
+    </string-array>
+
+    <string name="submit_button">View Faculty List</string>
+    <string name="search_hint">Enter name of the teacher</string>
+    <string name="title_activity_display__spinner__info">Faculty List</string>
+    <string name="title_activity_case0">Case0</string>
+    <string name="title_activity_clickone">Faculty Details</string>
+    <string name="title_activity_clicktwo">Clicktwo</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="Cabin_textview">CABIN</string>
+    <string name="title_activity_search_acitvity">SearchAcitvity</string>
+    <string name="aboutus">About Us</string>
+    <string name="title_activity_about">About</string>
+
+    <string-array name="devs">
+        <item>Abhinav Dua</item>
+        <item>Vatsal Mahajan</item>
+        <item>Himanshu Verma</item>
+    </string-array>
+
+    <string name="title_activity_display__dev__info">Display_Dev_Info</string>
+
+    <color name="white">#FFFFFF</color>
+    <color name="shadow">#FFFFFF</color>
+
+    <string name="title_activity_faculty_det">FacultyDet</string>
+
+</resources>
