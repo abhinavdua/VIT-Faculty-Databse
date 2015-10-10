@@ -46,9 +46,6 @@ public class FacultyDetails extends Activity {
 		String str4 = "";
 		String str5 = "";
 		tv1.setText(d);
-		/*Bundle bundle = getIntent().getExtras();*/
-		 //   if(bundle != null) {
-		   //     tv1.setText(bundle.getString("CABIN"));}
 		final MyDatabase db;
 		db = new MyDatabase(this);
 		cursor = db.getCursor(branch.toLowerCase());

@@ -20,7 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.SearchView;
-//import com.coderzheaven.searchviewwithfilter.R;
+
 public class FacultyList extends Activity implements SearchView.OnQueryTextListener{
 	SearchView mSearchView;
 	ListView list1;
@@ -40,11 +40,11 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 		
 		Intent intent = getIntent();
 		final String m=intent.getStringExtra("branch");
-		//Toast.makeText(this, m, Toast.LENGTH_SHORT).show();
+
 		db = new MyDatabase(this);
 		employees = db.getCursor(m.toLowerCase());
 		int n = db.getCnt(m.toLowerCase());
-		//hello = db.getRecord();// you would not typically call this on the main thread
+
 
 		
 		
@@ -76,38 +76,15 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 		
 		
 		Arrays.sort(s);
-		/*ContentAdapter  adapter = new ContentAdapter(this, android.R.layout.simple_list_item_1,
-                s);
-		list1.setAdapter(adapter);*/
-		
-		
+
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, s);
-		/*list1.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
-                s));*/
 		list1.setAdapter(adapter);
 		f = adapter.getFilter();
 		
-		/*final QuickScroll quickscroll = (QuickScroll) layout.findViewById(R.id.quickscroll);
-		quickscroll.init(QuickScroll.TYPE_INDICATOR, list1, adapter, QuickScroll.STYLE_HOLO);*/
-		
-       // mListView.setTextFilterEnabled(true);
-		
-		/*adapter = new SimpleCursorAdapter(this, 
-				android.R.layout.simple_list_item_1, 
-				employees, 
-				new String[] {"name"},
-				new int[] {android.R.id.text1},0);*/
 		list1.setFastScrollEnabled(true);
 		list1.isSmoothScrollbarEnabled();
-		//list1.setAdapter(adapter);
 		list1.setTextFilterEnabled(true);
-        //setupSearchView();
-		//mSearchView = (SearchView) findViewById(R.id.action_search);
-		//setupSearchView();
-		//searchView = (SearchView) findViewById(R.id.action_search);
-		//getListView().setTextFilterEnabled(true);
-		list1.setOnItemClickListener(new OnItemClickListener() 
+		list1.setOnItemClickListener(new OnItemClickListener()
 		{
 				public void onItemClick(AdapterView<?> parent, View view,
 			    int position, long id) 
@@ -116,7 +93,6 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 					 String name = (String) list1.getItemAtPosition(position);
 					
 					
-					//String name = d.getString(1);
 								Intent intent1 = new Intent (getApplication() , FacultyDetails.class );
 								intent1.putExtra("Fname", name.toUpperCase());
 								intent1.putExtra("branch", m);
@@ -129,7 +105,6 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 					}
 				
 		});
-		//setupSearchView();
 		overridePendingTransition(R.anim.anim2, R.anim.anim1);
 	}
 	
@@ -141,10 +116,7 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 	    return null;
 	}
 	
-	/**
-	 * Set up the {@link android.app.ActionBar}.
-	 */
-	
+
 	
 	
 	/**
@@ -184,19 +156,13 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 	        mSearchView.setOnQueryTextListener(this);
 	         
 	        mSearchView.setQueryHint("Search Here");
-	        //mSearchView.requestFocusFromTouch();
-	        
-	        //listView.setTextFilterEnabled(true);
 	    }
 
 	    public boolean onQueryTextChange(String newText) {
 	        if (TextUtils.isEmpty(newText)) {
 	        	
-	            //list1.clearTextFilter();
 	        	f.filter(null);
 	        } else {
-	            //list1.setFilterText(newText.toString());
-	        	//list1.setFilterText(null);
 	        	f.filter(newText);
 	        }
 	        return true;
@@ -227,49 +193,5 @@ public class FacultyList extends Activity implements SearchView.OnQueryTextListe
 
 }
 
-/*class ContentAdapter extends ArrayAdapter<String> implements SectionIndexer {
-	
-	private String mSections = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	public ContentAdapter(Context context, int textViewResourceId,
-			String[] s) {
-		super(context, textViewResourceId, s);
-	}
-	
-	@Override
-	public int getPositionForSection(int section) {
-		// TODO Auto-generated method stub
-		for (int i = section; i >= 0; i--) {
-			for (int j = 0; j < getCount(); j++) {
-				if (i == 0) {
-					// For numeric section
-					for (int k = 0; k <= 9; k++) {
-						if (StringMatcher.match(String.valueOf(getItem(j).charAt(0)), String.valueOf(k)))
-							return j;
-					}
-				} else {
-					if (StringMatcher.match(String.valueOf(getItem(j).charAt(0)), String.valueOf(mSections.charAt(i))))
-						return j;
-				}
-			}
-		}
-		return 0;
-	}
-		
-
-	@Override
-	public int getSectionForPosition(int arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public Object[] getSections() {
-		// TODO Auto-generated method stub
-		String[] sections = new String[mSections.length()];
-		for (int i = 0; i < mSections.length(); i++)
-			sections[i] = String.valueOf(mSections.charAt(i));
-		return sections;
-	}*/
 
 

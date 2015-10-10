@@ -25,17 +25,13 @@ public class MyDatabase extends SQLiteAssetHelper{
  
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-		//String [] sqlSelect = {"0 _id", "name", "cabin","email","desig","school"};
-		String [] sqlSelect = {"id","name","cabin", "email","dec"}; 
+		String [] sqlSelect = {"id","name","cabin", "email","dec"};
 		String sqlTables = g;
 		System.out.println("sql tables is "+g);
 		
 		qb.setTables(sqlTables);
-		//qb.s;
 		Cursor c = qb.query(db,sqlSelect , null, null,
 				null, null, null);
-		/*Cursor d = db.rawQuery("SELECT Fac_Cabin FROM SCSE_FAC WHERE Fac_Name = ?", new String[] {"Senthil J"});*/
-		/*ex = extract.toString();*/
 		c.moveToFirst();
 	
 		return c;
@@ -47,18 +43,13 @@ public class MyDatabase extends SQLiteAssetHelper{
 
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-		//String [] sqlSelect = {"0 _id", "name", "cabin","email","desig","school"};
-		String [] sqlSelect = {"id","name","cabin", "email","dec"}; 
+		String [] sqlSelect = {"id","name","cabin", "email","dec"};
 		String sqlTables = g;
 
 		qb.setTables(sqlTables);
-		//qb.s;
 		Cursor c = qb.query(db,sqlSelect , null, null,
 				null, null, null);
-		/*Cursor d = db.rawQuery("SELECT Fac_Cabin FROM SCSE_FAC WHERE Fac_Name = ?", new String[] {"Senthil J"});*/
-		/*ex = extract.toString();*/
-		//c.getCount();
-	
+
 		return c.getCount();
 		
 

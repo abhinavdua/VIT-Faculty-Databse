@@ -23,56 +23,6 @@ public class About extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
-		//tv1 = (TextView) findViewById(R.id.tv);
-		//tv1.setText("Developers"+"\n"+"Abhinav Dua"+"\n"+"Vatsal Mahajan"+"\n"+"Himanshu Verma");
-		// Show the Up button in the action bar.
-		/*list2 = (ListView) findViewById(R.id.listView2);
-		List<String> arr_devs = new ArrayList<String>();
-        arr_devs.add("Abhinav Dua");
-        arr_devs.add("Vatsal Mahajan");
-        arr_devs.add("Himanshu Verma");
-        
-        ArrayAdapter<String> arrayadap = new ArrayAdapter<String>(
-                this, 
-                android.R.layout.simple_list_item_1,
-                arr_devs );
-
-        list2.setAdapter(arrayadap); 
-        
-        list2.setOnItemClickListener(new OnItemClickListener() 
-		{
-				public void onItemClick(AdapterView<?> parent, View view,
-			    int position, long id) 
-				{	
-					//String name = d.getString(1);
-					String name1 = "Developer + UI + Guy behind this android application";
-					String name2 = "Developer + UI";
-					String name3 = "Database";
-					String name = (String) list2.getItemAtPosition(position);
-					
-					Intent intent2 = new Intent (getApplication() , Display_Dev_Info.class );
-					if(name.contentEquals("Abhinav Dua"))
-					{
-						intent2.putExtra("Fname", name1);
-					}
-					else if(name.contentEquals("Vatsal Mahajan"))
-					{
-						intent2.putExtra("Fname", name2);
-					}
-					else if(name.contentEquals("Himanshu Verma"))
-					{
-						intent2.putExtra("Fname", name3);
-					}
-					startActivity(intent2);
-			          
-			                     
-			       			
-			                
-			       
-					}
-				
-		});*/
-        
 		setupActionBar();
 	}
 
